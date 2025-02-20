@@ -3,76 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(180deg, #1e3c72, #2a5298);
-            color: #fff;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease-in-out;
-        }
-        h1, h2, h3 {
-            text-align: center;
-        }
-        .header {
-            text-align: center;
-            padding: 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .profile-img {
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-        }
-        .section {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        .visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        a {
-            color: #00c3ff;
-            text-decoration: none;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    <title>Kassa Siddhartha - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -85,7 +17,7 @@
         <div class="section" id="contact">
             <h2>Contact Information</h2>
             <p>📞 Phone: +91 7093825549</p>
-            <p>✉ Email: kassasiddhartha50@gmail.com</p>
+            <p>✉ Email: <a href="mailto:kassasiddhartha50@gmail.com">kassasiddhartha50@gmail.com</a></p>
             <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/kassa-siddhartha-7880ab301" target="_blank">LinkedIn Profile</a></p>
         </div>
 
@@ -137,19 +69,6 @@
         </div>
     </div>
 
-    <script>
-        const sections = document.querySelectorAll(".section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.1 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
